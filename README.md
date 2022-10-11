@@ -25,14 +25,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
-
+    `.map`- creates a new array with the results of the specific function on every element of the array, changes the data base on the function.
+    `.reduce` - returns a single value from an array, can be used with numbers to sum, or with non- numericals to concatonate.  the initial value is especially important with using an array of objects, as if you leave it out it will use the enitre first object as the initiator and cause errors.
+    `.filter` - returns a new array with values from the original based on a logical test provided by the function, discarding those that return false boolean values.
 2. Explain the difference between a callback and a higher order function.
-
+    A callback function is a normal function that is refrenced inside another higher order or non callback function.  This reduces redundency, burden when testing and simplifies code.  The higher order function is just a normal function that references a funtion that is listed elsewhere in the codebase.
 3. Explain what a closure is.
-
+    A closure is the combination of a new function created within another function(lexical or local/ private environment).  The open bracket of the new function creates the closure as it initiates the new level of scope.
 4. Describe the four principles of the 'this' keyword.
-
+    Window or global binding- When in the global scope, the value of 'this' will be the window or console object, Arrow functions Bind to the window always. preventing them from functioning
+    Implicit Binding- Implicit binding is dot syntax like `this.name`. Its Everything on the left of the . provides the context for the things on the right
+    Explicit Binding - his is the `call` or `apply` function that provides the context for the function. `bind` can make this a more lasting connection to reduce errors
+    New Binding - New binding is a way to create things from a set of data without naming them all. Like procedurally generating NPCs in a video game. This requires a constructor function and the use of the `new` keyword.  
 5. Why do we need super() in an extended class?
+    It tells the computer that we are bringing forward the keys, methods, arguments from the parent class we are extending.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
