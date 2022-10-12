@@ -16,7 +16,7 @@ function myFunction() {
 //myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// The variable internal is declared within the scope of myFunction and can be reached because function as scope is narrowed the futher you step into functions. The lexical scope of the function allows it to reach the variable interal but anything outside of myFunction can not.
 
 
 
@@ -30,11 +30,14 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(aNum) {
+  let sum = 0
+  for(let i=0; i<= aNum; i++){
+    sum += i
   }
- 
+  return sum
+}
+console.log(summation(4)) 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.

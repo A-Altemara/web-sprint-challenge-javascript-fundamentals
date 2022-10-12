@@ -29,7 +29,7 @@ Edit this document to include your answers after each question. Make sure to lea
     `.reduce` - returns a single value from an array, can be used with numbers to sum, or with non- numericals to concatonate.  the initial value is especially important with using an array of objects, as if you leave it out it will use the enitre first object as the initiator and cause errors.
     `.filter` - returns a new array with values from the original based on a logical test provided by the function, discarding those that return false boolean values.
 2. Explain the difference between a callback and a higher order function.
-    A callback function is a normal function that is refrenced inside another higher order or non callback function.  This reduces redundency, burden when testing and simplifies code.  The higher order function is just a normal function that references a funtion that is listed elsewhere in the codebase.
+    A callback function is a normal function that is used as an argument inside another higher order or non callback function. This reduces redundancy, burden when testing and simplifies code. The higher order function is just a normal function that accepts a function as an argument that is listed elsewhere in the codebase.
 3. Explain what a closure is.
     A closure is the combination of a new function created within another function(lexical or local/ private environment).  The open bracket of the new function creates the closure as it initiates the new level of scope.
 4. Describe the four principles of the 'this' keyword.
