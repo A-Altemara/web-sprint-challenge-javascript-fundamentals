@@ -63,10 +63,17 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(anArr){
+    let displayNames = []
+    anArr.forEach(getName => {
+      let comName = getName.animal_name
+      let sciName = getName.scientific_name
+      displayNames.push(`name: ${comName}, scientific: ${sciName}`)
+    });
+
+    return displayNames
   }
-  
+  console.log(animalNames(zooAnimals))
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -78,8 +85,16 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(anArr){
+    let allNames = anArr.map(getName => {
+      let comName = getName.animal_name
+      return comName
+    })
+    let fixName = allNames.map(lowName => {
+      let fixed = lowName.toLowerCase()
+      return fixed
+    })
+    return fixName
   }
   
   
@@ -91,10 +106,11 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(anArr){
+    let lowPop = anArr.filter(pop => pop.population < 5)
+    return lowPop
   }
-  
+  lowPopulationAnimals(zooAnimals)
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -105,11 +121,16 @@ const zooAnimals = [
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(anArr){
+   
+    let totalPop = anArr.reduce((accu, pop) => {
+      return accu + pop.population
+    }, 0)
+    return totalPop
   }
   
-  
+  console.log(USApop(zooAnimals))
+
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
   Use the higher-order function called consume to do the following:
